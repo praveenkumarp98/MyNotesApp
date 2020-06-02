@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="fab_margin">32dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="text_28sp">28sp</dimen>
+    <dimen name="margin_148dp">148dp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="margin_108dp">108dp</dimen>
+    <dimen name="text_24sp">24sp</dimen>
+    <dimen name="elevation_4dp">4dp</dimen>
+</resources>
+
+

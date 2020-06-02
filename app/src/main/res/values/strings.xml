@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyNotesApp</string>
+    <string name="title">Title</string>
+    <string name="you_can_add_your_description_text_here">You can add your description text here</string>
+    <string name="save_note">Save Note</string>
+    <string name="clear_all">Clear all</string>
+    <string name="update_note">Update Note</string>
+    <string name="cancel">Cancel</string>
+</resources>
