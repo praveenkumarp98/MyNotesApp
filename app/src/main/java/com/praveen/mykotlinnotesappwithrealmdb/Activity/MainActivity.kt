@@ -1,4 +1,4 @@
-package com.praveen.mykotlinnotesappwithrealmdb
+package com.praveen.mykotlinnotesappwithrealmdb.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.praveen.mykotlinnotesappwithrealmdb.Adapter.NotesAdapter
+import com.praveen.mykotlinnotesappwithrealmdb.Model.Notes
+import com.praveen.mykotlinnotesappwithrealmdb.R
 import io.realm.Realm
 import io.realm.RealmResults
 
@@ -64,7 +67,11 @@ class MainActivity : AppCompatActivity() {
     private fun getAllNotes() {
         notesList = ArrayList()
         result = realm.where(Notes::class.java).findAll()
-        recyclerView.adapter = NotesAdapter(this, result)
+        recyclerView.adapter =
+            NotesAdapter(
+                this,
+                result
+            )
         recyclerView.adapter!!.notifyDataSetChanged()
     }
 }

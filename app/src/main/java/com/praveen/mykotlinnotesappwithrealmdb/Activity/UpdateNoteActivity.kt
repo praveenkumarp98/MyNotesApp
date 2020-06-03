@@ -1,4 +1,4 @@
-package com.praveen.mykotlinnotesappwithrealmdb
+package com.praveen.mykotlinnotesappwithrealmdb.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.praveen.mykotlinnotesappwithrealmdb.Model.Notes
+import com.praveen.mykotlinnotesappwithrealmdb.R
 import io.realm.Realm
 /**
  * created by : praveen
@@ -37,7 +39,8 @@ class UpdateNoteActivity : AppCompatActivity() {
             updateNotesToDB(noteId)
         }
         btnCancel.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,
+                MainActivity::class.java))
             finish()
         }
     }

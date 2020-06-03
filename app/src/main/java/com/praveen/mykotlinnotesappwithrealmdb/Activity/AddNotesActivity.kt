@@ -1,4 +1,4 @@
-package com.praveen.mykotlinnotesappwithrealmdb
+package com.praveen.mykotlinnotesappwithrealmdb.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.praveen.mykotlinnotesappwithrealmdb.Model.Notes
+import com.praveen.mykotlinnotesappwithrealmdb.R
 import io.realm.Realm
 
 /**
@@ -74,7 +76,8 @@ class AddNotesActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this,
+            MainActivity::class.java))
         finish()
     }
 }

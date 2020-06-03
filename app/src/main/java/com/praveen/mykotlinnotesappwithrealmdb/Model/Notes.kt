@@ -1,4 +1,4 @@
-package com.praveen.mykotlinnotesappwithrealmdb
+package com.praveen.mykotlinnotesappwithrealmdb.Model
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey

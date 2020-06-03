@@ -1,4 +1,4 @@
-package com.praveen.mykotlinnotesappwithrealmdb
+package com.praveen.mykotlinnotesappwithrealmdb.Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.praveen.mykotlinnotesappwithrealmdb.Model.Notes
+import com.praveen.mykotlinnotesappwithrealmdb.R
+import com.praveen.mykotlinnotesappwithrealmdb.Activity.UpdateNoteActivity
 import io.realm.Realm
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.item_layout.view.*
@@ -23,7 +26,9 @@ class NotesAdapter (private val context: Context, private val notesList : RealmR
     private var realm = Realm.getDefaultInstance()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
-        return ViewHolder(v)
+        return ViewHolder(
+            v
+        )
     }
 
     override fun getItemCount(): Int {
@@ -54,7 +59,8 @@ class NotesAdapter (private val context: Context, private val notesList : RealmR
             return@setOnLongClickListener true
         }
         holder.itemView.setOnClickListener {v->
-            val intent = Intent(context,UpdateNoteActivity::class.java)
+            val intent = Intent(context,
+                UpdateNoteActivity::class.java)
             intent.putExtra("noteId",noteIdNew)
             intent.putExtra("noteTitle",v.titleTextView.text)
             intent.putExtra("noteDescription",v.descriptionTextView.text)
